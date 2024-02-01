@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Contacto</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+      <!-- Requerimiento -->
+        <mat-form-field>
+            <mat-label for="tu-requerimiento">Requiero</mat-label>
+            <mat-select id="tu-requerimiento" name="tu-requerimiento" [(ngModel)]="tuRequerimiento" required>
+                <mat-option *ngFor="let service of services" [value]="service.value">
+                    {{service.viewValue}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="contactForm.controls['tu-requerimiento']?.invalid && contactForm.controls['tu-requerimiento']?.touched">
+                Este campo es obligatorio
+            </mat-error>
+        </mat-form-field>
+
+      <!-- Nombre -->
+      <mat-form-field>
+        <mat-label for="tu-nombre">Tu nombre*</mat-label>
+        <input matInput placeholder="Dinos tu nombre" name="tu-nombre" [(ngModel)]="tuNombre" required>
+        <mat-error *ngIf="contactForm.controls['tu-nombre']?.invalid && contactForm.controls['tu-nombre']?.touched">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Empresa -->
+      <mat-form-field>
+        <mat-label for="tu-empresa">Empresa</mat-label>
+        <input matInput placeholder="Nombre de la empresa" name="tu-empresa" [(ngModel)]="tuEmpresa">
+      </mat-form-field>
+
+      <!-- Correo electrónico -->
+      <mat-form-field>
+        <mat-label for="tu-email">Tu email*</mat-label>
+        <input matInput placeholder="Ingresa tu correo" name="tu-email" [(ngModel)]="tuEmail" required email>
+        <mat-error *ngIf="contactForm.controls['tu-email']?.invalid && contactForm.controls['tu-email']?.touched">
+          Este campo es obligatorio o el correo no es válido
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Número de teléfono -->
+      <mat-form-field>
+        <mat-label for="tu-telefono">Número de teléfono*</mat-label>
+        <input matInput placeholder="Ingresa tu número" name="tu-telefono" [(ngModel)]="tuTelefono" required>
+        <mat-error *ngIf="contactForm.controls['tu-telefono']?.invalid && contactForm.controls['tu-telefono']?.touched">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Mensaje -->
+      <mat-form-field>
+        <mat-label for="tu-mensaje">Mensaje*</mat-label>
+        <textarea matInput placeholder="Coméntanos sobre tu requerimiento" name="tu-mensaje" [(ngModel)]="tuMensaje" required></textarea>
+        <mat-error *ngIf="contactForm.controls['tu-mensaje']?.invalid && contactForm.controls['tu-mensaje']?.touched">
+          Este campo es obligatorio
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Aceptación -->
+      <mat-checkbox name="tu-aceptacion" [(ngModel)]="tuAceptacion" required>Acepto recibir comunicaciones de Infasa Perú.</mat-checkbox>
+
+      <!-- Botón de Envío -->
+      <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">Enviar requerimiento</button>
+    </form>
+  </mat-card-content>
+</mat-card>

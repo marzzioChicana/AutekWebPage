@@ -10,3 +10,29 @@
     text-align: center;
     width: 100%;
 }
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    filter: grayscale(100%);
+    opacity: 0.9;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.image-wrapper:hover img,
+.image-wrapper.active img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.image-wrapper.hovered img:not(:hover) {
+    opacity: 0.4;
+}
