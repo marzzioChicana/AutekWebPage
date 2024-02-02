@@ -1,0 +1,19 @@
+.card-margin{
+    margin: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /* Establece la dirección de los elementos hijos en fila (por defecto es row) */
+  }
+
+.image-section {
+    flex: 1; /* Ocupa el 50% del ancho disponible */
+    /* Puedes agregar estilos adicionales según tus necesidades, como márgenes o padding */
+  }
+  
+  .form-section {
+    flex: 1; /* Ocupa el 50% del ancho disponible */
+    padding: 16px; /* Añade espacio alrededor del formulario */
+    /* Puedes agregar estilos adicionales según tus necesidades */
+  }
