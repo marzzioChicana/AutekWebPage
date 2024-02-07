@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MaterialModule } from 'src/shared/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactComponent } from './components/contact/contact.component';
+import { ServicesCompanyComponent } from './components/services-company/services-company.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactComponent } from './components/contact/contact.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ServicesCompanyComponent
   ],
   imports: [
     BrowserModule,

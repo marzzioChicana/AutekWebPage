@@ -1,0 +1,29 @@
+.servicio {
+    margin: 20px;
+}
+
+.custom-layout {
+    display: flex;
+  }
+  
+  .custom-layout img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .custom-layout .card-body {
+    width: 50%;
+  }
+  
+  .bs-card-title {
+    font-size: 1.5rem; /* Tamaño del título */
+    margin-bottom: 10px; /* Espacio inferior del título */
+    font-weight: bold; /* Negrita */
+  }
+  
+  .bs-card-text {
+    font-size: 1rem; /* Tamaño del texto */
+    line-height: 1.5; /* Altura de línea */
+  }
