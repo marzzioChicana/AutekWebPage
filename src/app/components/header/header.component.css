@@ -1,11 +1,15 @@
 .custom-toolbar {
-    display: flex;
-    align-items: center;
     height: auto;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: var(--eerie-black);
 }
 
-.example-spacer {
-    flex: 1 1 auto;
+.container-object {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px 80px;
 }
 
 img {
@@ -13,13 +17,22 @@ img {
     height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .toolbar-buttons-container {
     margin-left: auto;
+    color: var(--white);
 }
 
 .toolbar-button {
-    margin-right: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+    font-weight: 500;
+    font-family: "Oswald", sans-serif;
+    transition: opacity 0.5s; /* Agregamos una transición suave */
+}
+
+.toolbar-button.inactive {
+    opacity: 0.5; /* Establecemos la opacidad a 0.5 para los botones inactivos */
 }
