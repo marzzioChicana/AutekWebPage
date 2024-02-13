@@ -15,6 +15,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { CarouselComponent } from '@coreui/angular';
+import { CarouselCaptionComponent } from '@coreui/angular';
+import { CarouselControlComponent } from '@coreui/angular';
+import { CarouselIndicatorsComponent } from '@coreui/angular';
+import { CarouselInnerComponent } from '@coreui/angular';
+import { CarouselItemComponent } from '@coreui/angular';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,6 +37,11 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatSelectModule,
     MatCheckboxModule,
     NgbCarouselModule,
+    CarouselComponent,
+    CarouselCaptionComponent,
+    CarouselIndicatorsComponent,
+    CarouselInnerComponent,
+    CarouselItemComponent
   ],
   exports: [
     BrowserModule,
@@ -44,7 +56,12 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatOptionModule,
     MatSelectModule,
     MatCheckboxModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    CarouselComponent,
+    CarouselCaptionComponent,
+    CarouselIndicatorsComponent,
+    CarouselInnerComponent,
+    CarouselItemComponent
   ],
 })
 export class MaterialModule { }
