@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "autek-web-page:build:production"
+              "buildTarget": "autek-web-page:build:production"
             },
             "development": {
-              "browserTarget": "autek-web-page:build:development"
+              "buildTarget": "autek-web-page:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "autek-web-page:build"
+            "buildTarget": "autek-web-page:build"
           }
         },
         "test": {
